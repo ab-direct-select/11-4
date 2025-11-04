@@ -578,9 +578,9 @@
             if (cart.length === 0) {
                 cartItemsDiv.innerHTML = '<p style="text-align: center; color: #999;">購物車是空的</p>';
                 document.getElementById('subtotalPrice').textContent = '0';
-                document.getElementById('shippingFee').textContent = '40';
+                document.getElementById('shippingFee').textContent = '55';
                 document.getElementById('shippingNote').textContent = '';
-                document.getElementById('totalPrice').textContent = '40';
+                document.getElementById('totalPrice').textContent = '55';
                 return;
             }
 
@@ -596,7 +596,7 @@
             `).join('');
 
             const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            const shippingFee = subtotal >= 600 ? 0 : 40;
+            const shippingFee = subtotal >= 600 ? 0 : 55;
             const total = subtotal + shippingFee;
 
             document.getElementById('subtotalPrice').textContent = subtotal;
@@ -641,7 +641,7 @@
             }
 
             const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            const shippingFee = subtotal >= 600 ? 0 : 40;
+            const shippingFee = subtotal >= 600 ? 0 : 55;
             const total = subtotal + shippingFee;
             const orderTime = new Date().toLocaleString('zh-TW');
 
